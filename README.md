@@ -54,7 +54,7 @@ Sample `gulpfile.js`:
 ```javascript
 var gulp = require('gulp'),
 	gutil = require('gulp-util'),
-	atomic = require('atomicscss'),
+	atomic = require('gulp-atomicscss'),
 	concat = require('gulp-concat'),
 	sass = require ('gulp-sass'),
 	stream;
@@ -64,7 +64,7 @@ gulp.task('atomic', function() {
 	return gulp.src('files/*.html')
 			.pipe(concat('_atomic.scss'))
 			.pipe(atomic())
-		  	.pipe(gulp.dest('scss/_atomic.scss'));
+		  	.pipe(gulp.dest('scss/'));
 });
 
 gulp.task('sass', ['atomic'], function () {	
