@@ -10,6 +10,45 @@ First, install `gulp-atomicscss` as a development dependency:
 npm install --save-dev gulp-atomiccsss
 ```
 
+## Class Attribute
+
+Write class names as emmet css abbreviations.
+
+* `<emmet>`
+
+Use SCSS variables
+
+* `<emmet>-v<var name>`
+
+Multi-part settings
+
+* `<emmet>-<val>-<val>-<val>`
+
+Percentages
+* `<emmet>-x<num>`
+
+Using a dot ‘.’
+
+* `<emmet>-p<num>`
+* `<emmet>-<num>p<num>`
+
+Pseudo classes
+
+* `<emmet>-pse-hover`
+
+classname:hover { . . . }
+
+* `<emmet>-pse-hover-active`
+
+Molecules - groups atomic classes together for re-use
+
+* `_<className>`
+
+Escaping SCSS generation
+
+* `-<Classname>`
+
+
 Sample `gulpfile.js`:
 
 ```javascript
