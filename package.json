@@ -1,4 +1,3 @@
-
 {
   "name": "gulp-atomicscss",
   "version": "0.1.0",
@@ -21,7 +20,9 @@
   },
   "dependencies": {
     "through2": "*",
-    "gulp-util": "~2.2.0"
+    "gulp-util": "~2.2.0",
+    "async":  "*",
+    "lodash": ">=2.4.1"
   },
   "devDependencies": {
     "mocha": "*",
