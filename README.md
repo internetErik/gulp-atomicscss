@@ -56,26 +56,22 @@ var gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	atomic = require('gulp-atomicscss'),
 	concat = require('gulp-concat'),
-	sass = require ('gulp-sass'),
-	stream;
-
+	sass = require ('gulp-sass');
 
 gulp.task('atomic', function() {
 	return gulp.src('files/*.html')
-			.pipe(concat('_atomic.scss'))
-			.pipe(atomic())
-		  	.pipe(gulp.dest('scss/'));
+	       .pipe(concat('_atomic.scss'))
+	       .pipe(atomic())
+               .pipe(gulp.dest('scss/'));
 });
 
 gulp.task('sass', ['atomic'], function () {	
     gulp.src('scss/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('css/'));
+    .pipe(sass())
+    .pipe(gulp.dest('css/'));
 });
 
-
 gulp.task('default', ['sass']);
-
 
 gulp.task('watch', function() {
     gulp.watch(['files/*.html', 'scss/*.scss'], function(event) {
