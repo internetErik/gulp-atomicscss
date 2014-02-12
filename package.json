@@ -10,8 +10,8 @@
   "homepage": "https://github.com/internetErik/gulp-atomicscss",
   "bugs": "https://github.com/internetErik/gulp-atomicscss/issues",
   "author": {
-    "name": "",
-    "email": "",
+    "name": "Erik Christianson",
+    "email": "internet.erik@gmail.com",
     "url": "https://github.com/internetErik"
   },
   "main": "./index.js",
