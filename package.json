@@ -1,6 +1,6 @@
 {
   "name": "gulp-atomicscss",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A plugin for Gulp that takes text, scans for class attributes and generates an scss file from the classes",
   "keywords": [
     "gulpplugin",
@@ -21,7 +21,6 @@
   "dependencies": {
     "through2": "*",
     "gulp-util": "~2.2.0",
-    "async":  "*",
     "lodash": ">=2.4.1"
   },
   "devDependencies": {
