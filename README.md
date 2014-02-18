@@ -77,12 +77,13 @@ Escaping SCSS generation
 * `-ignoreThis` => 
 
 
-## Getting Started with a Test Project
+## Getting Started with a Sample Project
 
 Create a folder called files, and create a file in it called `index.html`
 
 ```html
 <!doctype html>
+<link rel="stylesheet" href="../css/style.css">
 <html>
 <body>
 <div class="dib">Hello World</div>
