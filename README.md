@@ -77,35 +77,95 @@ Escaping SCSS generation
 * `-ignoreThis` => 
 
 
-Sample `gulpfile.js`:
+## Getting Started with a Test Project
+
+Create a folder called files, and create a file in it called `index.html`
+
+```html
+<!doctype html>
+<html>
+<body>
+<div class="dib">Hello World</div>
+</body>
+</html>
+```
+
+Create a Folder called scss and create a file in it called `style.scss`:
+
+```scss
+@import "atomic";
+```
+
+Create the following file `gulpfile.js`:
 
 ```javascript
 var gulp = require('gulp'),
-    gutil = require('gulp-util'),
     atomic = require('gulp-atomicscss'),
     concat = require('gulp-concat'),
     sass = require ('gulp-sass');
 
 gulp.task('atomic', function() {
-	return gulp.src('files/*.html')
-	       .pipe(concat('_atomic.scss'))
-	       .pipe(atomic())
-	       .pipe(gulp.dest('scss/'));
+    return gulp.src('files/*.html')
+        .pipe(concat('_atomic.scss'))
+        .pipe(atomic())
+	.pipe(gulp.dest('scss/'));
 });
 
 gulp.task('sass', ['atomic'], function () {	
-	gulp.src('scss/*.scss')
-	.pipe(sass())
-	.pipe(gulp.dest('css/'));
+    gulp.src('scss/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('css/'));
 });
 
 gulp.task('default', ['sass']);
 
 gulp.task('watch', function() {
     gulp.watch(['files/*.html', 'scss/*.scss'], function(event) {
-      gulp.start('default');
+        gulp.start('default');
     });
 });
+```
+
+For this gulpfile to work you will need to use the following commands:
+
+```
+npm install gulp
+npm install gulp-atomicscss
+npm install gulp-concat
+npm install gulp-sass
+```
+
+You should now have the following directory structure:
+
+```
+files/
+ |- index.html
+scss
+ |- style.scss
+node-modules
+ |- < . . . >
+gulpfile.js
+```
+
+now run the command `gulp`, and the following files will be created:
+
+```
+css/
+ |- style.css
+scss/_atomic.scss
+```
+
+The file `_atomic.scss` should contain the following:
+
+```scss
+.dib { display: inline-block; }
+```
+
+The file `style.css` should contain the following:
+
+```css
+.dib {
+    display: inline-block; }
 ```
 
 ## License
