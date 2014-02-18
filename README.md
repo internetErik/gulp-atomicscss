@@ -83,10 +83,12 @@ Create a folder called files, and create a file in it called `index.html`
 
 ```html
 <!doctype html>
-<link rel="stylesheet" href="../css/style.css">
 <html>
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 <body>
-<div class="dib">Hello World</div>
+    <div class="dib">Hello World</div>
 </body>
 </html>
 ```
