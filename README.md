@@ -12,44 +12,62 @@ npm install --save-dev gulp-atomiccsss
 
 ## Class Attribute
 
-Write class names as emmet css abbreviations.
+###Write class names as emmet css abbreviations.
 
 * `<emmet>`
 * `class="dib"` => `.dib { display: inline-block; }`
 
-Use colors
+###Use colors
 
 * `<emmet>-c<hex>`
 * `class="c-cf00"` => `.c-cf00 { color: #f00; }`
 
-Use SCSS variables
+###Use SCSS variables
 
 * `<emmet>-v<var name>`
 * `class="c-vColor1"` => `.c-vColor1 { color: $Color1; }`
 
-Multi-part settings
+###Multi-part settings
 
 * `<emmet>-<val>-<val>-<val>`
 * `class="m-10px-5px-0px-5px"` => `.m-10px-5px-0px-5px { margin: 10px 5px 0px 5px; }`
 
-Using a dot ‘.’
+###Using a dot ‘.’
 
 * `<emmet>-p<num>`
 * `<emmet>-<num>p<num>`
 * `class="fz-p5em"` => `.fz-p5em { font-size: .5em; }`
 * `class="fz-2p5em"` => `.fz-2p5em { font-size: 2.5em; }`
 
-Percentages
+###Percentages
 * `<emmet>-x<num>`
 * `class="w-x50"` => `.w-x50 { width: 50%; }`
 * `class="w-x12p5"` => `.w-x12p5 { width: 12.5%; }`
 
-Pseudo classes
+###Pseudo classes
 
 * `<emmet>-pse-<pseudo>`
 * `class="c-pse-hover-cf00"` => `.c-pse-hover-cf00:hover { color: #f00; }`
 
-Molecules - groups atomic classes together for re-use
+###Media Queries
+
+* `mq<sass-variable>-<emmet>` => `@media #{$<sass-variable>} { <emmet-generated-sass> }`
+* `class="bgc-cf00 mqmobile-bgc-c000"` => 
+
+style.scss
+``` 
+$mobile: "(max-width: 550px)";
+@import "atomic"
+
+```
+
+_atomic.scss
+``` 
+.bgc-cf00 { background-color: #f00; } 
+@media (max-width: 550px) { .bgc-c000 { background-color: #000; }}
+```
+
+###Molecules - groups atomic classes together for re-use
 
 * `_<className> <emmet> <emmet> <emmet>`
 * `class="_link1 c-cf00 dib lh-25px"` => 
@@ -71,7 +89,7 @@ Molecules - groups atomic classes together for re-use
   line-height: 25px; }
 ```
 
-Escaping SCSS generation
+###Escaping SCSS generation
 
 * `-<Classname>`
 * `-ignoreThis` => 
