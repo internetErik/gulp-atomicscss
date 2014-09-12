@@ -14,64 +14,77 @@ npm install --save-dev gulp-atomiccsss
 
 ###Write class names as emmet css abbreviations.
 
-* `<emmet>`
-* `class="dib"` => `.dib { display: inline-block; }`
+*syntax:* `<emmet>`
+
+*example:* `class="dib"` => `.dib { display: inline-block; }`
 
 ###Use colors
 
-* `<emmet>-c<hex>`
-* `class="c-cf00"` => `.c-cf00 { color: #f00; }`
+*syntax:* `<emmet>-c<hex>`
+
+*example:* `class="c-cf00"` => `.c-cf00 { color: #f00; }`
 
 ###Use SCSS variables
 
-* `<emmet>-v<var name>`
-* `class="c-vColor1"` => `.c-vColor1 { color: $Color1; }`
+*syntax:* `<emmet>-v<var name>`
+
+*example:* `class="c-vColor1"` => `.c-vColor1 { color: $Color1; }`
 
 ###Multi-part settings
 
-* `<emmet>-<val>-<val>-<val>`
-* `class="m-10px-5px-0px-5px"` => `.m-10px-5px-0px-5px { margin: 10px 5px 0px 5px; }`
+*syntax:* `<emmet>-<val>-<val>-<val>`
+
+*example:* `class="m-10px-5px-0px-5px"` => `.m-10px-5px-0px-5px { margin: 10px 5px 0px 5px; }`
 
 ###Using a dot ‘.’
 
-* `<emmet>-p<num>`
-* `<emmet>-<num>p<num>`
-* `class="fz-p5em"` => `.fz-p5em { font-size: .5em; }`
-* `class="fz-2p5em"` => `.fz-2p5em { font-size: 2.5em; }`
+*syntax:* `<emmet>-p<num>`
+
+*syntax:* `<emmet>-<num>p<num>`
+
+*example:* `class="fz-p5em"` => `.fz-p5em { font-size: .5em; }`
+
+*example:* `class="fz-2p5em"` => `.fz-2p5em { font-size: 2.5em; }`
 
 ###Percentages
-* `<emmet>-x<num>`
-* `class="w-x50"` => `.w-x50 { width: 50%; }`
-* `class="w-x12p5"` => `.w-x12p5 { width: 12.5%; }`
+*syntax:* `<emmet>-x<num>`
+
+*example:* `class="w-x50"` => `.w-x50 { width: 50%; }`
+
+*example:* `class="w-x12p5"` => `.w-x12p5 { width: 12.5%; }`
 
 ###Pseudo classes
 
-* `<emmet>-pse-<pseudo>`
-* `class="c-pse-hover-cf00"` => `.c-pse-hover-cf00:hover { color: #f00; }`
+*syntax:* `<emmet>-pse-<pseudo>`
+
+*example:* `class="c-pse-hover-cf00"` => `.c-pse-hover-cf00:hover { color: #f00; }`
 
 ###Media Queries
 
-* `mq<sass-variable>-<emmet>` => `@media #{$<sass-variable>} { <emmet-generated-sass> }`
-* `class="bgc-cf00 mqmobile-bgc-c000"` => 
+*syntax:* `mq<sass-variable>-<emmet>` => `@media #{$<sass-variable>} { <emmet-generated-sass> }`
+
+*example:* 
+
+`class="bgc-cf00 mqmobile-bgc-c000"` => 
 
 style.scss
-``` 
+```scss
 $mobile: "(max-width: 550px)";
 @import "atomic"
-
 ```
 
 _atomic.scss
-``` 
+```scss
 .bgc-cf00 { background-color: #f00; } 
 @media (max-width: 550px) { .bgc-c000 { background-color: #000; }}
 ```
 
 ###Molecules - groups atomic classes together for re-use
 
-* `_<className> <emmet> <emmet> <emmet>`
-* `class="_link1 c-cf00 dib lh-25px"` => 
+*syntax:* `_<className> <emmet> <emmet> <emmet>`
+*example:* `class="_link1 c-cf00 dib lh-25px"` => 
 
+_atomic.scss
 ```scss
 ._link1 { 
   color: #f00; 
@@ -79,8 +92,9 @@ _atomic.scss
   line-height: 25px; }
 ```
 
-* `class="_color c-cf00 _link dib lh-25px"` => 
+*example:* `class="_color c-cf00 _link dib lh-25px"` => 
 
+_atomic.scss
 ```scss 
 ._color { 
   color: #f00; } 
@@ -91,8 +105,8 @@ _atomic.scss
 
 ###Escaping SCSS generation
 
-* `-<Classname>`
-* `-ignoreThis` => 
+*syntax:* `-<Classname>`
+*example:* `-ignoreThis` => 
 
 
 ## Getting Started with a Sample Project
