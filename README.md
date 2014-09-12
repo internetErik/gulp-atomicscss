@@ -106,6 +106,7 @@ _atomic.scss
 ###Escaping SCSS generation
 
 *syntax:* `-<Classname>`
+
 *example:* `-ignoreThis` => 
 
 
@@ -202,6 +203,10 @@ The file `style.css` should contain the following:
 .dib {
     display: inline-block; }
 ```
+
+## Helpful Links
+
+* http://docs.emmet.io/cheat-sheet/
 
 ## License
 
