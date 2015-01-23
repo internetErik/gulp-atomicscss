@@ -7,7 +7,7 @@
 First, install `gulp-atomicscss` as a development dependency:
 
 ```shell
-npm install --save-dev gulp-atomiccsss
+npm install --save-dev gulp-atomicscss
 ```
 
 ## Class Attribute
