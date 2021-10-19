@@ -1,5 +1,5 @@
 var through = require("through2"),
-	PluginError = require('plugin-error');,
+	PluginError = require('plugin-error'),
 	atomic = require("./lib/atomicscss");
 
 module.exports = function () {

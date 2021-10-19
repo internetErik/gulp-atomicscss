@@ -1,0 +1,11 @@
+.c-cf00 { color: #f00; }
+.c-pse-hover-c00f:hover { color: #00f; }
+.dib { display: inline-block; }
+.fz-p5em { font-size: .5em; }
+@media #{$mobile} {
+.mqmobile-bgc-c000 { background-color: #000; }
+}
+@media #{$mobile} {
+.mqmobile-c-cfff { color: #fff; }
+}
+.p50 { padding: 50px; }

@@ -26,9 +26,13 @@
   "devDependencies": {
     "coveralls": "*",
     "event-stream": "*",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.0.0",
     "istanbul": "*",
     "mocha": "*",
     "mocha-lcov-reporter": "*",
+    "sass": "^1.43.2",
     "should": "~2.1.0"
   },
   "engines": {
