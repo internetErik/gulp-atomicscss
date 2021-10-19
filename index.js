@@ -1,5 +1,5 @@
 var through = require("through2"),
-	gutil = require("gulp-util"),
+	PluginError = require('plugin-error');,
 	atomic = require("./lib/atomicscss");
 
 module.exports = function () {
@@ -29,7 +29,7 @@ module.exports = function () {
 
 		if (file.isStream()) {
 			this.emit("error",
-				new gutil.PluginError("gulp-atomicCss", "Stream content is not supported"));
+				new PluginError("gulp-atomicCss", "Stream content is not supported"));
 			return callback();
 		}
 
