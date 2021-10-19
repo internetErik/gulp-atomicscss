@@ -1,7 +1,9 @@
+.c-c00f { color: #00f; }
 .c-cf00 { color: #f00; }
 .c-pse-hover-c00f:hover { color: #00f; }
 .dib { display: inline-block; }
 .fz-p5em { font-size: .5em; }
+.lh-25px { line-height: 25px; }
 @media #{$mobile} {
 .mqmobile-bgc-c000 { background-color: #000; }
 }
@@ -9,3 +11,9 @@
 .mqmobile-c-cfff { color: #fff; }
 }
 .p50 { padding: 50px; }
+._list1 { 
+list-style-type: 1px;
+color: #00f;
+line-height: 25px;
+ }
+
